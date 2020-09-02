@@ -1,0 +1,16 @@
+{
+  "name": "salt-jsfs-linting-demo",
+  "version": "1.0.0",
+  "description": "A barebones application with a ESLint setup configured with the </salt> configuration",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint '**/*.js'",
+    "lint-watch": "nodemon --exec 'npm run lint --silent'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-config-salt": "^1.0.1",
+    "nodemon": "^2.0.4"
+  }
+}
