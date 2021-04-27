@@ -21,12 +21,27 @@ then
   exit 1
 fi
 
+LINTFIXMESSAGE=''
 lintresult=$(npm run lint --silent)
 if [[ "$lintresult" != *"2 errors"* ]]
 then
-  echo "Linting verified - NOT OK"
-  echo $lintresult
-  exit 1
+
+  echo "Linting failed - will try to fix it"
+
+  lintfixresult=$(npm run lint -- --fix)
+  if [[ "$lintresult" != *"2 errors"* ]]
+  then
+    echo "Linting fix tried - NOT OK"
+    echo $lintresult
+    exit 1
+  else
+    # The fix worked - and we have no errors
+    echo "Linting fixed - OK. Updating"
+    git add -- . ':(exclude)package.*'
+    git commit -m "Linting fixed by verification script"
+    git push
+    LINTFIXMESSAGE='(Fixed linting errors)'
+  fi
 fi
 
 
@@ -41,5 +56,5 @@ fi
 # cd back to where we came from
 cd - > /dev/null
 
-echo "Installation, linting and testing verified $AUDITFIXMESSAGE - OK"
+echo "Installation, linting$LINTFIXMESSAGE and testing verified $AUDITFIXMESSAGE - OK"
 exit 0
