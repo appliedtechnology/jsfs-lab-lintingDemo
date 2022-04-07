@@ -5,12 +5,14 @@
   "main": "app.js",
   "scripts": {
     "lint": "eslint '**/*.js'",
-    "lint-watch": "nodemon --exec 'npm run lint --silent'"
+    "lint-watch": "nodemon --exec 'npm run lint --silent'",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint-config-salt": "^1.1.0",
+    "husky": "^7.0.4",
     "nodemon": "^2.0.7"
   }
 }

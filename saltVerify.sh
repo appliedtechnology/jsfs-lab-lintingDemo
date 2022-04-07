@@ -38,7 +38,7 @@ then
     # The fix worked - and we have no errors
     echo "Linting fixed - OK. Updating"
     git add -- . ':(exclude)package.*'
-    git commit -m "Linting fixed by verification script"
+    git commit -m "Linting fixed by verification script" -n
     git push
     LINTFIXMESSAGE='(Fixed linting errors)'
   fi
@@ -48,7 +48,7 @@ fi
 if [ "$AUDITFIXDONE" = true ] ; then
     echo "Dependencies audit done, fixed and the script still works - committing changes"
     git add package*
-    git commit -m "Audit fixed by script"
+    git commit -m "Audit fixed by script" -n
     git push
     AUDITFIXMESSAGE='(Dependecies updated)'
 fi
