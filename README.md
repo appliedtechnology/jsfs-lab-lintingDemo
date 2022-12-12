@@ -11,7 +11,7 @@ Unless instructed otherwise, the minimum linting setup that you're expected to u
 - [The ESLint tool](https://eslint.org/docs/user-guide/getting-started), combined with
 - [the Salt configuration](https://www.npmjs.com/package/eslint-config-salt)
 
-To create this basic linting setup run the following command in the root of your project: `npm install eslint-config-salt --save-dev` (you can inspect the package.json in this repository to see that we're using  this configuration). Then copy the `.eslintrc.json` file and its contents. Now all you need to do is to create the lint commands described in the `package.json`.
+To create this basic linting setup run the following command in the root of your project: `npm install eslint-config-salt --save-dev` (you can inspect the package.json in this repository to see that we're using  this configuration). Then copy the `.eslintrc.json` file from this repo and its contents. Now all you need to do is to create the lint commands described in the `package.json`.
 
 There are other ESLint configurations (like airbnb, standard, Google etc) and ESLint is also highly [configurable](https://eslint.org/docs/user-guide/configuring). We suggest that you throughout the course play around with different setups of ESLint to get fully comfortable with the tool.
 
