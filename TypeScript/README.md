@@ -1,4 +1,4 @@
-# Linting at Salt - JavaScript
+# Linting at Salt - TypeScript
 
 Hi again! At Salt you're expected to set up a linter in each and every project. The reason why we insist on always using linters is that being confident with these tools is often expected at work places.
 
@@ -7,13 +7,13 @@ Unless instructed otherwise, the minimum linting setup that you're expected to u
 - [The ESLint tool](https://eslint.org/docs/user-guide/getting-started), combined with
 - [the Salt configuration](https://www.npmjs.com/package/eslint-config-salt)
 
-To create this basic linting setup, for runnning vanilla JavaScript, run the following command in the root of your project: `npm install eslint-config-salt --save-dev` (you can inspect the package.json in one of the correct directory for you to see that we're using this configuration). Then copy the `.eslintrc.json` file from this repo and its contents. Now all you need to do is to create the lint commands described in the `package.json` from this repo.
+To create this basic linting setup, for runnning TypeScript, run the following command in the root of your project: `npm install eslint-config-salt-typescript --save-dev` (you can inspect the package.json in one of the correct directory for you to see that we're using this configuration). Then copy the `.eslintrc.json` file from this repo and its contents. Now all you need to do is to create the lint commands described in the `package.json` from this repo. And remember to have the `tsconfig.json` file in your repo, otherwise the linter will throw an error!
 
 There are other ESLint configurations (like airbnb, standard, Google etc) and ESLint is also highly [configurable](https://eslint.org/docs/user-guide/configuring). We suggest that you throughout the course play around with different setups of ESLint to get fully comfortable with the tool.
 
 ## This Repository
 
-In this repository we've set up a very barebones application structure in which we're using the linting setup described above. Install the dependencies with `npm install` and try out the scripts `npm run lint` and `npm run lint-watch`, respectively. Note that the `npm run lint-watch` command is dependent on nodemon which is a developer tool (you don't have to run your linting in watch mode if you don't want do). Compare the results in of the terminal output with the comments in the`index.js` file to see if you managed to run the linter correctly.
+In this repository we've set up a very barebones application structure in which we're using the linting setup described above. Install the dependencies with `npm install` and try out the scripts `npm run lint` and `npm run lint-watch`, respectively. Note that the `npm run lint-watch` command is dependent on nodemon which is a developer tool (you don't have to run your linting in watch mode if you don't want do). Compare the results in of the terminal output with the comments in the`index.ts` file to see if you managed to run the linter correctly.
 
 ## Prettier is a code formatter, not a linter
 
