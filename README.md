@@ -4,4 +4,4 @@ Linting tools are used for identifying and reporting on _code quality_ and _styl
 
 ## Linting at Salt
 
-Before you start, you need to know if you are working with [JavaScript](./JavaScript/README.md) or [TypeScript](./TypeScript/README.md), and work from that folder. So choose the correct folder and folder we will see you there!
+Before you start, you need to know if you are working with [JavaScript](./JavaScript/README.md) or [TypeScript](./TypeScript/README.md), and work from that folder. So choose the correct folder and we will see you there!
