@@ -5,11 +5,11 @@ Hi again! At Salt you're expected to set up a linter in each and every project. 
 Unless instructed otherwise, the minimum linting setup that you're expected to use in your projects is the following:
 
 - [The ESLint tool](https://eslint.org/docs/user-guide/getting-started), combined with
-- [the Salt configuration](https://www.npmjs.com/package/eslint-config-salt)
+- the AirBnb configuration
 
-To create this basic linting setup, for running TypeScript, run the following command in the root of your project: `npm install eslint-config-salt-typescript --save-dev` (you can inspect the package.json in one of the correct directory for you to see that we're using this configuration). Then copy the `.eslintrc.json` file from this repo and its contents. Now all you need to do is to create the lint commands described in the `package.json` from this repo. And remember to have the `tsconfig.json` file in your repo, otherwise the linter will throw an error!
+To create this basic linting setup, for running TypeScript, run the following command in the root of your project: `npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-airbnb-typescript eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks --save-dev` (you can inspect the package.json in one of the correct directory for you to see that we're using this configuration). Then copy the `.eslintrc.json` file from this repo and its contents. Now all you need to do is to create the lint commands described in the `package.json` from this repo. And remember to have the `tsconfig.json` file in your repo, otherwise the linter will throw an error!
 
-There are other ESLint configurations (like airbnb, standard, Google etc) and ESLint is also highly [configurable](https://eslint.org/docs/user-guide/configuring). We suggest that you throughout the course play around with different setups of ESLint to get fully comfortable with the tool.
+There are other ESLint configurations (like standard, Google etc) and ESLint is also highly [configurable](https://eslint.org/docs/user-guide/configuring). We suggest that you throughout the course play around with different setups of ESLint to get fully comfortable with the tool.
 
 ## This Repository
 
