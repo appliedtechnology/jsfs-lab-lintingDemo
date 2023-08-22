@@ -19,7 +19,7 @@ npm init @eslint/config
 
 Your `.eslintrc.js` should look like the [this eslint file](./.eslintrc.js)
 
-There are other ESLint configurations (like standard, Google etc) and ESLint is also highly [configurable](https://eslint.org/docs/user-guide/configuring). We suggest that you throughout the course play around with different setups of ESLint to get fully comfortable with the tool.
+> Note: There are other ESLint configurations (like standard, Google etc) and ESLint is also highly [configurable](https://eslint.org/docs/user-guide/configuring). We suggest that you throughout the course play around with different setups of ESLint to get fully comfortable with the tool.
 
 ## This Repository
 
