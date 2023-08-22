@@ -1,23 +1,29 @@
 # Linting at Salt - JavaScript
 
-Hi again! At Salt you're expected to set up a linter in each and every project. The reason why we insist on always using linters is that being confident with these tools is often expected at work places.
+Hi again! At Salt, you're expected to set up a linter for each project. The reason why we insist on always using linting tools is to be confident with these tools as these are often used in companies.
 
 Unless instructed otherwise, the minimum linting setup that you're expected to use in your projects is the following:
 
-- [The ESLint tool](https://eslint.org/docs/user-guide/getting-started), combined with
-- the AirBnb configuration
+- [The ESLint tool](https://eslint.org/docs/user-guide/getting-started), using the `eslint:recommended` settings
 
-To create this basic linting setup, for running vanilla JavaScript, run the following command in the root of your project: `npm install eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks --save-dev` (you can inspect the package.json in one of the correct directory for you to see that we're using this configuration). Then copy the `.eslintrc.json` file from this repo and its contents. Now all you need to do is to create the lint commands described in the `package.json` from this repo.
+To create this basic linting setup, for running vanilla JavaScript, run the following command in the root of your project: `npm init @eslint/config` (you can inspect the package.json in one of the correct directories for you to see that we're using this configuration).
+```bash
+npm init @eslint/config                                          
+✔ How would you like to use ESLint? · problems # To check syntax and find problems
+✔ What type of modules does your project use? · esm # JavaScript
+✔ Which framework does your project use? · none
+✔ Does your project use TypeScript? · 'No'
+✔ Where does your code run? · 'browser', 'node'
+✔ What format do you want your config file to be in? · JavaScript
+```
 
-There are other ESLint configurations (like standard, Google etc) and ESLint is also highly [configurable](https://eslint.org/docs/user-guide/configuring). We suggest that you throughout the course play around with different setups of ESLint to get fully comfortable with the tool.
+Your `.eslintrc.js` should look like the [this eslint file](./.eslintrc.js)
+
+> Note: There are other ESLint configurations (like standard, Google etc) and ESLint is also highly [configurable](https://eslint.org/docs/user-guide/configuring). We suggest that you throughout the course play around with different setups of ESLint to get fully comfortable with the tool.
 
 ## This Repository
 
-In this repository we've set up a very barebones application structure in which we're using the linting setup described above. Install the dependencies with `npm install` and try out the scripts `npm run lint` and `npm run lint-watch`, respectively. Note that the `npm run lint-watch` command is dependent on nodemon which is a developer tool (you don't have to run your linting in watch mode if you don't want do). Compare the results in of the terminal output with the comments in the`index.js` file to see if you managed to run the linter correctly.
-
-## Prettier is a code formatter, not a linter
-
-[Prettier](https://www.npmjs.com/package/prettier) is a code formatter that takes care of formatting your code according to a certain style. However, it doesn't handle _code quality rules_ (which linters do). Linters handle both _code style_ and _code quality_ means that if you're using both a linter and Prettier, there's a risk of Prettier and the linter colliding. There are ways to combine Prettier and linters in efficiently and safely, but since we want you to be fully confident with linters we suggest that you refrain from using Prettier during the salt bootcamp.
+This repository demonstrates a very basic nodejs based application. And we use ESLint in it using the same instructions as above. Install the dependencies with `npm install` and try out the scripts `npm run lint` and `npm run lint-watch`, respectively. Note that the `npm run lint-watch` command is dependent on nodemon which is a developer tool. The **watch** mode helps us keep the lint server up and running so we don't have to restart it as we're fixing the problems. Compare the results of the terminal output with the comments in the`index.js` file to see if you managed to run the linter correctly. Also, make sure your VSCode shows the same errors using the [ESLint VSCode Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ## Conclusion
 

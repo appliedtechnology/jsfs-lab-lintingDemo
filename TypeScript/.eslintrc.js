@@ -1,8 +1,10 @@
+/* eslint-env node */
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'import', 'react', 'react-hooks'],
-  extends: ['airbnb-typescript'],
-  rules: {
-    // Add any custom rules here
+  env: {
+    node: true
   },
+  extends: ['plugin:@typescript-eslint/recommended', 'eslint:recommended'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  root: true,
 };
