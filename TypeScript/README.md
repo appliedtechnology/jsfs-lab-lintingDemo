@@ -61,7 +61,7 @@ Run `npm run lint` to execute the lint process for your application.
 
 ## This Repository
 
-This repository demonstrates a very basic nodejs based application with TypeScript. And we use ESLint in it using the same instructions as above. Install the dependencies with `npm install` and try out the scripts `npm run lint` and `npm run lint-watch`, respectively. Note that the `npm run lint-watch` command is dependent on nodemon which is a developer tool. The **watch** mode helps us keep the lint server up and running so we don't have to restart it as we're fixing the problems. Compare the results in of the terminal output with the comments in the`index.ts` file to see if you managed to run the linter correctly. Also, make sure your VSCode shows the same errors using the [ESLint VSCode Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+This repository demonstrates a very basic nodejs based application with TypeScript. And we use ESLint in it using the same instructions as above. Install the dependencies with `npm install` and try out the scripts `npm run lint` and `npm run lint-watch`, respectively. Note that the `npm run lint-watch` command is dependent on nodemon which is a developer tool. The **watch** mode helps us keep the lint server up and running so we don't have to restart it as we're fixing the problems. Compare the results of the terminal output with the comments in the`index.ts` file to see if you managed to run the linter correctly. Also, make sure your VSCode shows the same errors using the [ESLint VSCode Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ## Conclusion
 
