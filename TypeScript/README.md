@@ -19,18 +19,6 @@ module.exports = {
 };
 ```
 
-Let's flip the extended dependencies in the `.eslintrc.js` as follows:
-
-```ts
-/* eslint-env node */
-module.exports = {
-  extends: ['plugin:@typescript-eslint/recommended', 'eslint:recommended'], // <-- we changed this
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  root: true,
-};
-```
-
 Since this is a nodejs application (and now a browser-based application), we need to tell ESLint that. Update the `.eslintrc.js` as follows:
 ```ts
 /* eslint-env node */
@@ -38,7 +26,7 @@ module.exports = {
   env: { // add this block
       node: true
   },
-  extends: ['plugin:@typescript-eslint/recommended', 'eslint:recommended'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   root: true,
